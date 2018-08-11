@@ -1,0 +1,100 @@
+<div class="fullBox container-fluid themeGradientBackground blur"></div>
+
+
+<!-- <div class="container-fluid flexContainer">
+
+</div> -->
+
+<div style="height:100vh;padding-top: 150px;  ">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-1">
+
+            </div>
+            <div class="col-md-5" id='gmap_canvas' style="background-color: black;min-height: 500px;">
+
+            </div>
+            <div class="col-md-5" style="background-color: #fdfdfd;min-height: 500px;padding-left: 5%;padding-right: 5%;padding-top: 2%;">
+
+
+                <div class="text-center">
+                    <h1>
+                        CONTACT ME
+                    </h1>
+                </div>
+
+                <div  *ngIf="showSpinner" style="z-index: 100;" class="container">
+                        <div class="row">
+                            <div id="loader">
+                                <div class="dot"></div>
+                                <div class="dot"></div>
+                                <div class="dot"></div>
+                                <div class="dot"></div>
+                                <div class="dot"></div>
+                                <div class="dot"></div>
+                                <div class="dot"></div>
+                                <div class="dot"></div>
+                                <div class="lading"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <div class="col-sm-12">
+                            <input type="text" (input)="removeNameAlert()" class="form-control" id="name" name="name" [(ngModel)]="name" placeholder="Enter Name"
+                                required autocomplete="off">
+                            <div class="col-sm-12" *ngIf="noName" class="alert alert-danger">
+                                <strong>Please Enter Name!</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-12">
+                            <input type="email" class="form-control" (input)="removeEmailAlert()" id="email" name="email" [(ngModel)]="email" placeholder="Enter Email"
+                                required autocomplete="off">
+                            <div class="col-sm-12" *ngIf="noEmail" class="alert alert-danger">
+                                <strong>Please Enter Email!</strong>
+                            </div>
+                            <div class="col-sm-12" *ngIf="invalidEmail" class="alert alert-danger">
+                                <strong>Invalid Email!</strong>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-sm-12">
+                            <button *ngIf="!showSpinner" type="button" class="btn btn-primary form-control" (click)="sendMail()">GET RESUME ON EMAIL</button>
+                        </div>
+                        <div class="col-sm-12" *ngIf="emailSentSuccessful" class="alert alert-success">
+                            <strong>Resume Sent Successfully! Check Your Mail</strong>
+                        </div>
+                        <div class="col-sm-12 " *ngIf="emailSentUnsuccessful" class="alert alert-danger">
+                            <strong>Something Went Wrong! Try Again</strong>
+                        </div>
+                    </div>
+                </form>
+
+
+                <div *ngIf="!showSpinner" class="text-center">
+                    <legend>OR</legend>
+                </div>
+
+
+                <div *ngIf="!showSpinner" class="form-group">
+                    <div class="col-sm-12">
+                        <a href="../../assets/resume2018.pdf" download>
+                            <button type="button" class="btn btn-primary form-control">
+                                DOWNLOAD RESUME
+                            </button>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-1">
+
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,56 @@
+.black {
+  background-color: rgb(0, 0, 0);
+}
+
+.fullBox {
+  height: 100vh;
+  width: 100vw;
+}
+
+.themeGradientBackground {
+  /* background: #304352;
+          background: -webkit-linear-gradient(
+            to top,
+            #d7d2cc,
+            #304352
+          );
+          background: linear-gradient(
+            to top,
+            #d7d2cc,
+            #304352
+          ); */
+  background: url('../../assets/action-adult-dance-270837.jpg');
+  background-size: cover;
+  /* filter: blur(10px); */
+}
+.flexContainer {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+}
+.blur {
+  position: absolute;
+  z-index: -1;
+}
+.portfolio-img {
+  height: 300px;
+  width: 300px;
+  border-radius: 100%;
+  box-shadow: 0 0 12px 1px rgb(105, 104, 104);
+}
+
+.fullHeight {
+  min-height: 100vh;
+}
+
+.transparent {
+  background-color: rgba(36, 34, 34, 0.712) !important;
+}
+
+.jetBlack {
+  background-color: black !important;
+}
